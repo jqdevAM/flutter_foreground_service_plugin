@@ -38,7 +38,9 @@ public class FlutterForegroundPlugin implements FlutterPlugin, MethodCallHandler
     private Runnable runnable;
     private Handler handler = new Handler(Looper.getMainLooper());
 
-    private FlutterForegroundPlugin() {}
+    public FlutterForegroundPlugin() {
+
+    }
 
     @Override
     public void onAttachedToEngine(FlutterPluginBinding binding) {
@@ -63,12 +65,12 @@ public class FlutterForegroundPlugin implements FlutterPlugin, MethodCallHandler
     /**
      * Plugin registration.
      */
-    public static void registerWith(Registrar registrar) {
-        if (instance == null) {
-            instance = new FlutterForegroundPlugin();
-        }
-        instance.onAttachedToEngine(registrar.context(), registrar.messenger());
-    }
+//    public static void registerWith(Registrar registrar) {
+//        if (instance == null) {
+//            instance = new FlutterForegroundPlugin();
+//        }
+//        instance.onAttachedToEngine(registrar.context(), registrar.messenger());
+//    }
 
     @Override
     public void onMethodCall(MethodCall call, Result result) {
